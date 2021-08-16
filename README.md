@@ -14,7 +14,7 @@ Implement the following in the __problems/01-car-drive.js__ file.
 
 1. Create a `Car` class.
 2. A newly instantiated instance should have its `speed` property initialized to
-   0.
+   `0`.
 3. Add an instance method called `drive(newSpeed)` that takes in a `newSpeed`
    and sets it to the instance's `speed` property. It should also return the
    present `speed` of the instance.
@@ -52,7 +52,7 @@ Implement the following in the __problems/02-calculator.js__ file.
 
 1. Create a `Calculator` class.
 2. A newly instantiated instance should have its `total` property initialized to
-   0.
+   `0`.
 3. Add the following instance methods which should all return the `total`
    property of the instance:
    a. `add(num)` - add the `num` arg to the `total`
