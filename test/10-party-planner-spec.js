@@ -34,7 +34,7 @@ describe("PartyPlanner", function () {
         const party1 = new PartyPlanner();
 
         expect(party1.throwParty()).to.eql(
-          "gotta add people to the guest list"
+          "Gotta add people to the guest list"
         );
       });
     });

@@ -34,16 +34,16 @@ Examples:
 ```js
 let car = new Car();
 car.drive(0);     // => returns 0
-console.log(car); // => {speed: 0, drive: ƒ}
+console.log(car); // => { speed: 0 }
 
 car.drive(10);    // => returns 10
-console.log(car); // => {speed: 10, drive: ƒ}
+console.log(car); // => { speed: 10, }
 
 car.drive(50);    // => returns 50
-console.log(car); // -> {speed: 50, drive: ƒ}
+console.log(car); // -> { speed: 50 }
 
 car.drive(100);   // => returns 100
-console.log(car); // -> {speed: 100, drive: ƒ}
+console.log(car); // -> { speed: 100 }
 ```
 
 ## Phase 2: `Calculator`
@@ -74,11 +74,11 @@ Examples:
 
 ```js
 let calculator = new Calculator();
-calculator.add(50);      // => returns 50
-calculator.subtract(35); // => returns 15
-calculator.multiply(10); // => returns 150
-calculator.divide(5);    // => returns 30
-calculator.total         // => returns 30
+console.log(calculator.add(50));      // => 50
+console.log(calculator.subtract(35)); // => 15
+console.log(calculator.multiply(10)); // => 150
+console.log(calculator.divide(5));    // => 30
+console.log(calculator.total)         // => 30
 ```
 
 ## Phase 3: `Dog`
@@ -92,7 +92,7 @@ Implement the following in the __problems/03-make-dog.js__ file.
    `Dog` class with a `name` property of "Jet".
 4. Add two instance methods:
    a. `changeName(newName)` - set the `name` to the `newName`
-   b. `speak(word)` - returns `${name} says hello`
+   b. `speak(word)` - returns `${name} says ${word}`
 
 Test your implementation by running the test specs in the
 __test/03-make-dog-spec.js__ file. Run the specs with the following command:
@@ -107,7 +107,7 @@ use the examples below at the bottom of the file run the file in Node.js.
 Examples:
 
 ```js
-let dog1 = Dog.makeJet(); // returns an object 
+let dog1 = Dog.makeJet(); // returns an object
 
 console.log(dog1.name);                 // Jet
 console.log(dog1.speak("hello"));       // Jet says hello
@@ -201,11 +201,11 @@ function iSpy(thing) {
   return "I spy a " + thing;
 }
 
-let spyTree = boundByAnArg(iSpy, "tree");
+let spyTree = bindToAnArg(iSpy, "tree");
 console.log(spyTree());        // => I spy a tree
 console.log(spyTree("car"));   // => I spy a tree
 
-let spyCar = boundByAnArg(iSpy, "car");
+let spyCar = bindToAnArg(iSpy, "car");
 console.log(spyCar());         // => I spy a car
 console.log(spyCar("potato")); // => I spy a car
 ```
@@ -341,7 +341,7 @@ melan.callMeLater(1000); // waits one second then prints "Hello this is Melan"
 
 Implement the following in the __problems/09-call-on-target.js__ file.
 
-Write a function named `callOnTarget(func, obj1, ob2)` that will accept a
+Write a function named `callOnTarget(func, obj1, obj2)` that will accept a
 function `func` and two objects, `obj1` and `obj2`. `callOnTarget` should return
 the result of the function `func` invoked with `obj1` as its context and `obj2`
 as the first argument.
@@ -421,20 +421,20 @@ Example 1:
 ```js
 const party = new PartyPlanner();
 
-console.log(party.throwParty()); // prints "gotta add people to the guest list"
+console.log(party.throwParty()); // prints "Gotta add people to the guest list"
 
 party.addToGuestList("James");
 console.log(party.throwParty()); // prints "Welcome to the party James"
 
-party.addToGuestList("Alvin"); 
+party.addToGuestList("Alvin");
 console.log(party.throwParty()); // prints "Welcome to the party James and Alvin"
 ```
 
 Example 2:
 
 ```js
-const party2 = partyPlanner();
-console.log(party2.throwParty()); // prints "gotta add people to the guest list"
+const party2 = new PartyPlanner();
+console.log(party2.throwParty()); // prints "Gotta add people to the guest list"
 
 party2.addToGuestList("Lucy");
 console.log(party2.throwParty()); // prints "Welcome to the party Lucy"
@@ -454,7 +454,7 @@ __test/11-bind-set-timeout-spec.js__ file. Run the specs with the following
 command:
 
 ```shell
-npm test test/11-bind-set-timeout-spec.js
+npm test test/11-bind-set-time-out-spec.js
 ```
 
 In addition to Mocha, you should test your code manually using Node.js. You can
