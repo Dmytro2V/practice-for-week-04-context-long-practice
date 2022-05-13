@@ -400,7 +400,7 @@ Implement the following in the __problems/10-party-planner.js__ file.
    a. `addToGuestList(name)` - add the `name` to the `guestList`
    b. `throwParty()` - return a different string depending on the length of the
       `guestList`:
-      * If there are no guests, return "gotta add people to the guest list"
+      * If there are no guests, return "Gotta add people to the guest list"
       * If there are guests in the `guestList`, return the guests' names. For
         example, if there are two guests, return "Welcome to the party
         ${name1} and ${name2}".
