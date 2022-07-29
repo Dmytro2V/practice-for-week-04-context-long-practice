@@ -48,6 +48,10 @@ describe("PartyPlanner", function () {
 
         expect(party1.throwParty()).to.equal("Welcome to the party James");
         expect(party2.throwParty()).to.equal("Welcome to the party Lucy");
+        party1.addToGuestList("Derek");
+        party2.addToGuestList("Johnny")
+        expect(party1.throwParty()).to.equal("Welcome to the party James and Derek");
+        expect(party2.throwParty()).to.equal("Welcome to the party Lucy and Johnny")
       });
     });
   });

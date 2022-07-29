@@ -37,7 +37,7 @@ car.drive(0);     // => returns 0
 console.log(car); // => { speed: 0 }
 
 car.drive(10);    // => returns 10
-console.log(car); // => { speed: 10, }
+console.log(car); // => { speed: 10 }
 
 car.drive(50);    // => returns 50
 console.log(car); // -> { speed: 50 }
@@ -53,8 +53,8 @@ Implement the following in the __problems/02-calculator.js__ file.
 1. Create a `Calculator` class.
 2. A newly instantiated instance should have its `total` property initialized to
    `0`.
-3. Add the following instance methods which should all return the `total`
-   property of the instance:
+3. Add the following instance methods which should all return the reassigned
+   `total` property of the instance:
    a. `add(num)` - add the `num` arg to the `total`
    b. `subtract(num)` - subtract the `num` arg from the `total`
    c. `divide(num)` - divide the `total` by the `num` arg
@@ -217,11 +217,11 @@ Implement the following in the __problems/06-fancy-calculator.js__ file.
 1. Import the `Calculator` class.
 2. Create a `FancyCalculator` class with the `Calculator` class as its parent
    class.
-3. Add the following instance methods which should all return the `total`
-   property of the instance:
+3. Add the following instance methods which should all return the reassigned
+   `total` property of the instance:
    a. `setTotal(newTotal)` - sets the `total` to the `newTotal`
    b. `modulo(num)` - sets the `total` to the remainder of dividing by `num`
-   c. `squared()` - multiplies the `total` by its self
+   c. `squared()` - multiplies the `total` by the `total`
 
 Test your implementation by running the test specs in the
 __test/06-fancy-calculator-spec.js__ file. Run the specs with the following
@@ -252,9 +252,10 @@ console.log(fancyCalculator.add(9))       // => 10
 Implement the following in the __problems/07-all-the-args.js__ file.
 
 Write a function named `allTheArgs(func, ...args)` that will accept a
-function `func` and any number of arguments after that concatenated to an array
-of `args`. The `allTheArgs` function should return the passed-in function `func`
-modified to always be invoked with the passed-in arguments `args`.
+function `func` and any number of arguments. Then return the string
+`"You bowed to"` concatenated to the array of `args`. The `allTheArgs` function
+should return the passed-in function `func` modified to always be invoked with
+the passed-in arguments `args`. See code block below for further details.
 
 Test your implementation by running the test specs in the
 __test/07-all-the-args-spec.js__ file. Run the specs with the following
@@ -283,7 +284,6 @@ console.log(onePlusTwoPlusFour);  // => 7
 
 ```js
 const bow = (...names) => {
-  let nameArr = Array.from(names);
   return "You bowed to " + names.join(" and ");
 };
 

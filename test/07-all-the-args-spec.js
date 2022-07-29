@@ -3,7 +3,6 @@ const allTheArgs = require("../problems/07-all-the-args.js");
 
 describe("allTheArgs()", function () {
   const bow = (...names) => {
-    let nameArr = Array.from(names);
     return "You bowed to " + names.join(" and ");
   };
 
